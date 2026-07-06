@@ -5,7 +5,7 @@ export default defineConfig({
   timeout: 30000,
   retries: 1,
   use: {
-    baseURL: 'https://automationintesting.online',
+    baseURL: 'http://localhost:5173',
     headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
