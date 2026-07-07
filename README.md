@@ -1,6 +1,17 @@
-#  Restful Booker Tests
+# Restful Booker Tests
 
 A Playwright/TypeScript automated test suite for the Booking Hotels application. This project covers three tiers of testing: UI end-to-end flows, REST API testing, and edge case validation.
+
+## Live Application
+
+The application being tested is deployed at:
+
+| Service | URL |
+|---|---|
+| Frontend | https://hotel-booking-silk-omega.vercel.app |
+| Backend API | https://hotel-booker-backend.onrender.com |
+
+> **Note:** The backend runs on Render's free tier and may take 30-60 seconds to respond on first load after inactivity. Tests in this repo run against localhost by default — update `playwright.config.ts` and API URLs to point at the live URLs to run against the deployed app.
 
 ## Tech Stack
 
@@ -33,6 +44,8 @@ Tests that verify the application handles invalid input correctly.
 - Invalid email format (e.g. test@com) shows email error
 - Letters in phone number field shows phone error
 - Check-out date before check-in date shows date error
+- API rejects bookings with missing fields
+- API rejects bookings with invalid room ID
 
 ## Getting Started
 
